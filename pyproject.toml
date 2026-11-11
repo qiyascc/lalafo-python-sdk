@@ -1,0 +1,64 @@
+[build-system]
+requires = ["hatchling>=1.21"]
+build-backend = "hatchling.build"
+
+[project]
+name = "lalafo-python-sdk"
+dynamic = ["version"]
+description = "Typed Python client for lalafo.az: sign in, categories and params, post, edit, deactivate and delete ads. Sync and async."
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "qiyascc", email = "qiyasturk@gmail.com" }]
+keywords = ["lalafo", "lalafo.az", "classifieds", "real estate", "azerbaijan", "ads", "sdk", "api"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Topic :: Internet :: WWW/HTTP",
+    "Typing :: Typed",
+]
+dependencies = ["httpx>=0.24,<1", "goodconf>=7.1", "pydantic>=2.7", "PyYAML>=6"]
+
+[project.optional-dependencies]
+toml = ["goodconf[toml]>=7.1"]
+yaml = ["goodconf[yaml]>=7.1"]
+dev = ["lalafo-python-sdk[toml,yaml]", "pytest>=7", "pytest-asyncio>=0.21", "ruff>=0.4", "mypy>=1.8", "types-PyYAML"]
+
+[project.urls]
+Homepage = "https://github.com/qiyascc/lalafo-python-sdk"
+Issues = "https://github.com/qiyascc/lalafo-python-sdk/issues"
+Changelog = "https://github.com/qiyascc/lalafo-python-sdk/blob/main/CHANGELOG.md"
+
+[tool.hatch.version]
+path = "src/lalafo_sdk/_version.py"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/lalafo_sdk"]
+
+[tool.hatch.build.targets.sdist]
+include = ["src/lalafo_sdk", "tests", "examples", "README.md", "CHANGELOG.md", "LICENSE"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+
+[tool.ruff]
+line-length = 120
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "B", "UP"]
+ignore = ["E731", "UP006", "UP007", "UP035", "UP045"]
+
+[tool.mypy]
+python_version = "3.10"
+plugins = ["pydantic.mypy"]
+warn_unused_ignores = true

@@ -1,0 +1,51 @@
+settings:
+  description: Settings for the lalafo client. Values come from code, LALAFO_* environment variables or a config file.
+  base_url: Site address. The API lives under it at /api
+  country_id: lalafo country id sent as the country-id header, 13 for Azerbaijan
+  language: Language sent as the language header, such as az_AZ or ru_RU
+  phone_code: Country calling code used to turn a local number such as 050 123 45 67 into +994501234567
+  endpoints: Path of every API call, relative to base_url
+  timeout: Seconds to wait for an answer
+  connect_timeout: Seconds to wait for a connection
+  max_retries: Extra attempts for calls that are safe to repeat
+  backoff_base: First wait between retries, in seconds
+  backoff_cap: Longest wait between retries, in seconds
+  renew_at: Share of the token lifetime after which the session is renewed, from 0.1 to 1
+  user_agent: User-Agent header
+  allow_insecure_http: Allow a plain http base_url outside localhost, for a test server on a private network only
+
+value:
+  empty: "{field} cannot be empty"
+  too_long: "{field} is longer than {limit} characters"
+  range: "{field} must be a whole number from {low} to {high}, got {value!r}"
+  choice: "{field} must be one of {choices}, got {value!r}"
+  phone: "{value!r} is not a phone number. Use +994501234567 or a local number such as 050 123 45 67"
+  password: password must be at least 5 characters
+  param: "param {param_id}: give either value_id for a dropdown or value for an input"
+  param_unknown: "param {param_id} does not exist for this category and city"
+  param_value: "param {param_id} ({name}) has no value_id {value_id}"
+  param_single: "param {param_id} ({name}) takes one value"
+  param_required: "param {param_id} ({name}) is required"
+  photo_small: "photo {index} is {size} bytes, lalafo needs at least {limit}"
+  photo_large: "photo {index} is {size} bytes, lalafo accepts at most {limit}"
+  photo_count: "give from 1 to {limit} photos, got {count}"
+  photo_type: "photo {index} must be bytes, a path or a (filename, bytes, content_type) tuple"
+  session: "session must be a Session, a mapping with a token, or None"
+
+error:
+  base_url: "base_url must be an absolute http or https address, got {url}"
+  insecure: "Refusing to send a session over plain http to {url}. Use https, or set allow_insecure_http for a private test server."
+  connect: "Could not reach lalafo, nothing was sent: {error}"
+  timeout: "lalafo did not answer: {error}"
+  unknown_outcome: "The request may or may not have gone through ({reason}). Check the account before trying again."
+  body: "lalafo sent an answer that is not JSON: {body}"
+  refused: lalafo refused the request
+  blocked: "lalafo answered with a Cloudflare check page {attempts} times. Nothing was processed, try again later."
+  captcha: lalafo asks for a captcha after failed sign ins. Sign in once on the website in a browser, then try again later.
+  no_session: Sign in first, or pass a saved session
+  no_refresh: The session expired and has no refresh token. Sign in again.
+  no_token: lalafo accepted the request but returned no token
+  no_draft: lalafo returned no draft id
+  no_image: "lalafo returned no id for photo {index}"
+  no_user: The session has no user id. Sign in again.
+  wait_timeout: "Ad {ad_id} is still {status} after {seconds} seconds"

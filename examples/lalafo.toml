@@ -1,0 +1,6 @@
+base_url = "https://lalafo.az"
+country_id = 13
+language = "az_AZ"
+phone_code = "994"
+timeout = 30
+max_retries = 2
