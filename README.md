@@ -5,12 +5,12 @@
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
 [![Async](https://img.shields.io/badge/sync%20%2B%20async-httpx-5A45FF)](https://www.python-httpx.org)
 [![Ruff](https://img.shields.io/badge/lint-ruff-D7FF64?logo=ruff&logoColor=black)](https://docs.astral.sh/ruff)
-[![License](https://img.shields.io/badge/license-MIT-green)](LICENSE)
+[![License](https://img.shields.io/badge/license-MIT-green)](https://github.com/qiyascc/lalafo-python-sdk/blob/main/LICENSE)
 
 Typed Python client for lalafo.az. Sign in, read categories and their params, post an ad with photos, edit, deactivate, activate and delete it, and list your own ads. Sync and async, with retry rules built so an ad is never posted twice.
 
 ```bash
-pip install git+https://github.com/qiyascc/lalafo-python-sdk.git
+pip install lalafo-python-sdk
 ```
 
 The client talks to the same `https://lalafo.az/api/...` endpoints as the lalafo.az website, with the same headers (`device: pc`, `country-id`, `language`, a fresh `request-id`, `user-hash`). It sends no device fingerprint and no mobile app identity. lalafo has no public API and can change these endpoints; every path is a setting.
@@ -133,7 +133,7 @@ lalafo.az is sometimes slow and sometimes answers with a short Cloudflare check 
 
 ## Config
 
-Pass values in code, or set `LALAFO_BASE_URL`, `LALAFO_COUNTRY_ID`, `LALAFO_LANGUAGE`, `LALAFO_PHONE_CODE`, `LALAFO_TIMEOUT`, `LALAFO_MAX_RETRIES`, `LALAFO_RENEW_AT`, or put them in `lalafo.toml` ([example](examples/lalafo.toml)). Every path is a setting (`LALAFO_ENDPOINTS__LOGIN=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`.
+Pass values in code, or set `LALAFO_BASE_URL`, `LALAFO_COUNTRY_ID`, `LALAFO_LANGUAGE`, `LALAFO_PHONE_CODE`, `LALAFO_TIMEOUT`, `LALAFO_MAX_RETRIES`, `LALAFO_RENEW_AT`, or put them in `lalafo.toml` ([example](https://github.com/qiyascc/lalafo-python-sdk/blob/main/examples/lalafo.toml)). Every path is a setting (`LALAFO_ENDPOINTS__LOGIN=...`). Messages live in `messages.yaml` and can be replaced with `messages.use(...)`.
 
 The defaults are lalafo.az (country `13`, `az_AZ`, `+994`), the only site this client was built and tested against. lalafo runs the same platform in other countries; point `base_url`, `country_id`, `language` and `phone_code` at one of them at your own risk.
 
@@ -142,5 +142,14 @@ The defaults are lalafo.az (country `13`, `az_AZ`, `+994`), the only site this c
 ```bash
 pip install -e ".[dev]" && pytest && ruff check . && mypy src
 ```
+
+## Links
+
+- Source code: [github.com/qiyascc/lalafo-python-sdk](https://github.com/qiyascc/lalafo-python-sdk)
+- PyPI: [pypi.org/project/lalafo-python-sdk](https://pypi.org/project/lalafo-python-sdk/)
+- Project page: [theqiyas.cc/projects/lalafo-sdk](https://theqiyas.cc/projects/lalafo-sdk/)
+- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+
+## License
 
 MIT
