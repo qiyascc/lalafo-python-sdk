@@ -1,5 +1,6 @@
 # lalafo-python-sdk
 
+[![PyPI](https://img.shields.io/pypi/v/lalafo-python-sdk?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/lalafo-python-sdk/)
 [![Python](https://img.shields.io/badge/python-3.10%20to%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![lalafo](https://img.shields.io/badge/site-lalafo.az-E5156B)](https://lalafo.az)
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
