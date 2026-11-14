@@ -1,6 +1,7 @@
 # lalafo-python-sdk
 
 [![PyPI](https://img.shields.io/pypi/v/lalafo-python-sdk?color=3775A9&logo=pypi&logoColor=white)](https://pypi.org/project/lalafo-python-sdk/)
+[![Docs](https://readthedocs.org/projects/lalafo-python-sdk/badge/?version=latest)](https://lalafo-python-sdk.readthedocs.io/en/latest/)
 [![Python](https://img.shields.io/badge/python-3.10%20to%203.13-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![lalafo](https://img.shields.io/badge/site-lalafo.az-E5156B)](https://lalafo.az)
 [![Typed](https://img.shields.io/badge/typing-mypy-2A6DB2)](https://mypy-lang.org)
@@ -146,6 +147,7 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 
 ## Links
 
+- Documentation: [lalafo-python-sdk.readthedocs.io](https://lalafo-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/lalafo-python-sdk](https://github.com/qiyascc/lalafo-python-sdk)
 - PyPI: [pypi.org/project/lalafo-python-sdk](https://pypi.org/project/lalafo-python-sdk/)
 - Project page: [theqiyas.cc/projects/lalafo-sdk](https://theqiyas.cc/projects/lalafo-sdk/)

@@ -33,6 +33,7 @@ dev = ["lalafo-python-sdk[toml,yaml]", "pytest>=7", "pytest-asyncio>=0.21", "ruf
 
 [project.urls]
 Homepage = "https://theqiyas.cc/projects/lalafo-sdk/"
+Documentation = "https://lalafo-python-sdk.readthedocs.io/"
 Source = "https://github.com/qiyascc/lalafo-python-sdk"
 Author = "https://theqiyas.cc"
 Issues = "https://github.com/qiyascc/lalafo-python-sdk/issues"

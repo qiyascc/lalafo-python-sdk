@@ -1,0 +1,67 @@
+.qc-author {
+  margin: 1.5rem var(--sidebar-item-spacing-horizontal) 1rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid var(--color-background-border);
+  border-radius: 10px;
+  background: var(--color-background-secondary);
+  font-size: var(--sidebar-item-font-size);
+  line-height: 1.45;
+}
+.qc-author__label {
+  display: block;
+  color: var(--color-foreground-muted);
+  font-size: 0.75em;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.qc-author__name {
+  display: block;
+  margin-top: 0.15rem;
+  color: var(--color-foreground-primary);
+  font-weight: 600;
+  text-decoration: none;
+}
+.qc-author__site {
+  color: var(--color-brand-primary);
+  text-decoration: none;
+}
+.qc-author__links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 0.8rem;
+  margin-top: 0.6rem;
+  padding-top: 0.6rem;
+  border-top: 1px solid var(--color-background-border);
+  font-size: 0.85em;
+}
+.qc-author__links a {
+  color: var(--color-foreground-secondary);
+  text-decoration: none;
+}
+.qc-author a:hover {
+  text-decoration: underline;
+}
+.qc-langs {
+  display: flex;
+  gap: 0.4rem;
+  margin: 0 var(--sidebar-item-spacing-horizontal) 0.8rem;
+}
+.qc-langs a {
+  padding: 0.15rem 0.55rem;
+  border: 1px solid var(--color-background-border);
+  border-radius: 999px;
+  color: var(--color-foreground-secondary);
+  font-size: 0.8em;
+  text-decoration: none;
+}
+.qc-langs a.is-current {
+  border-color: var(--color-brand-primary);
+  color: var(--color-brand-primary);
+  font-weight: 600;
+}
+.sd-card-title {
+  font-weight: 600;
+}
+table.docutils td, table.docutils th {
+  vertical-align: top;
+}
