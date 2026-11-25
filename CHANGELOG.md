@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.1.1
+
+- Project and author links point to qiyas.cc, the new address of the site. No code changes.
+
 ## 0.1.0
 
 - Sync `Lalafo` and async `AsyncLalafo`

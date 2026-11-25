@@ -123,7 +123,7 @@ On Windows CMD use double quotes around the name with brackets, as above. Single
 python -c "import lalafo_sdk; print(lalafo_sdk.__version__)"
 ```
 
-It prints the installed version, for example `0.1.0`. If you see `ModuleNotFoundError`, the package went into a different Python than the one you are running: activate the virtual environment and install again.
+It prints the installed version, for example `0.1.1`. If you see `ModuleNotFoundError`, the package went into a different Python than the one you are running: activate the virtual environment and install again.
 
 ## Before you sign in
 
