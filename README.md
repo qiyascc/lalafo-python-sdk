@@ -150,8 +150,8 @@ pip install -e ".[dev]" && pytest && ruff check . && mypy src
 - Documentation: [lalafo-python-sdk.readthedocs.io](https://lalafo-python-sdk.readthedocs.io/)
 - Source code: [github.com/qiyascc/lalafo-python-sdk](https://github.com/qiyascc/lalafo-python-sdk)
 - PyPI: [pypi.org/project/lalafo-python-sdk](https://pypi.org/project/lalafo-python-sdk/)
-- Project page: [theqiyas.cc/projects/lalafo-sdk](https://theqiyas.cc/projects/lalafo-sdk/)
-- Author: [Qiyas Sadıqov](https://theqiyas.cc), more projects at [theqiyas.cc](https://theqiyas.cc)
+- Project page: [qiyas.cc/projects/lalafo-sdk](https://qiyas.cc/projects/lalafo-sdk/)
+- Author: [Qiyas Sadıqov](https://qiyas.cc), more projects at [qiyas.cc](https://qiyas.cc)
 
 ## License
 
